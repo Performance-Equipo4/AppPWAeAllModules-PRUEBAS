@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 // Import our custom CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/Page_Inventories.scss';
+import Collapsible from 'react-collapsible';
 
 import Meta from '@/Commerce/components/Meta';
 import { FullSizeCenteredFlexBox } from '@/Commerce/components/styled';
@@ -13,29 +14,118 @@ function Page_Inventories() {
       <Meta title="Inventarios" />
       <div className="container">
         <div className="caja">
-          Columna uno
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut a et corporis voluptatem
-            voluptatibus natus delectus assumenda modi molestias! Ad esse, id dignissimos in
-            voluptatibus dicta sunt minus laboriosam aliquid.
-          </p>
-          <button type="button" className="btn btn-danger">Danger</button>
+          <div className="input-group mb-3">
+            <input type="text" className="form-control" placeholder="Buscar"></input>
+            <button className="btn btn-primary" type="button" id="button-addon2">
+              Buscar
+            </button>
+          </div>
+          <hr />
+          <div className="d-grid gap-2">
+            <button className="btn btn btn-success" type="button">
+              Crear
+            </button>
+          </div>
           <div className="card">
-              <div className="card-body">
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-              </div>
+            <div className="card-body">
+              <p className="card-text">Id:</p>
+              <hr />
+              <button type="button" className="btn btn-outline-success btn-sm">
+                Ver detalles
+              </button>
+              <button type="button" className="btn btn-outline-danger btn-sm">
+                Eliminar
+              </button>
             </div>
+          </div>
         </div>
         <div className="caja">
-          <h3>Informacion</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quas hic beatae
-            recusandae odit. Ullam recusandae exercitationem aut eius alias, deserunt optio rem
-            ipsam quibusdam expedita facilis consequatur doloremque! Laudantium?
-          </p>
+          <h3>Detalles</h3>
+          <hr />
+          <div className="input-group mb-3">
+            <span className="input-group-text">IdInstitutoOK</span>
+            <input type="text" aria-label="First name" className="form-control"></input>
+            <span className="input-group-text">IdAlmacenOK</span>
+            <input type="text" className="form-control"></input>
+          </div>
+          <div className="input-group mb-3">
+            <span className="input-group-text">IdProdServOK</span>
+            <input type="text" aria-label="First name" className="form-control"></input>
+            <span className="input-group-text">IdPresentaBK</span>
+            <input type="text" className="form-control"></input>
+          </div>
+          <div className="input-group mb-3">
+            <span className="input-group-text">ControlaSerie</span>
+            <input type="text" aria-label="First name" className="form-control"></input>
+          </div>
+          <Collapsible trigger="inventarios_info_ad:">
+            <div className="div-inventarios_info_ad">
+              <table className="table table-sm">
+                <thead className="table-dark">
+                  <tr>
+                    <th>IdEtiqueta</th>
+                    <th>Valor</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Prueba 1</th>
+                    <th>Prueba 2</th>
+                    <th>
+                    <button type="button" className="btn btn-info btn-sm">Ver más</button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Collapsible>
+          <hr />
+          <Collapsible trigger="inventarios_movtos:">
+          <div className="div-inventarios_movtos:">
+              <table className="table table-sm">
+                <thead className="table-dark">
+                  <tr>
+                    <th>CantidadMovto</th>
+                    <th>CantidadAnt</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Prueba 1</th>
+                    <th>Prueba 2</th>
+                    <th>
+                    <button type="button" className="btn btn-info btn-sm">Ver más</button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Collapsible> 
+          <hr />
+          <Collapsible trigger="inventarios_series:">
+          <div className="inventarios_series:">
+              <table className="table table-sm">
+                <thead className="table-dark">
+                  <tr>
+                    <th>Serie</th>
+                    <th>Placa</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Prueba 1</th>
+                    <th>Prueba 2</th>
+                    <th>
+                    <button type="button" className="btn btn-info btn-sm">Ver más</button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Collapsible > 
         </div>
       </div>
     </>
