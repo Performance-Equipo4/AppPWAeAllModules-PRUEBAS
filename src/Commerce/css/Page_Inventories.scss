@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container > div{
+    width: 50%;
+    height: 100%;
+}
+
+.caja{
+    background-color: aqua;
+    padding: 5px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: dotted;
+}
+
+.card{
+    width: 18rem;
+    margin: 10px;
+}

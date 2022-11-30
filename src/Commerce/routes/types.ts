@@ -9,6 +9,7 @@ enum Pages {
   Page2,
   Page3,
   Page4,
+  Page_Inventories,
   NotFound,
 }
 
